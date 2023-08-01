@@ -35,12 +35,7 @@ public class UserController {
         return LocalDateTime.now().format(DateTimeFormatter.ofPattern(properties.getDateformat()));
     }
 
-    /**
-     * 路径： /user/110
-     *
-     * @param id 用户id
-     * @return 用户
-     */
+
     @GetMapping("/{id}")
     public User queryById(@PathVariable("id") Long id,
                           @RequestHeader(value = "Truth", required = false) String truth) {
